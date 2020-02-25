@@ -14,9 +14,17 @@
 
 @implementation ViewController
 
+
+- (IBAction)tapPressed:(id)sender {
+    
+    _tapCount++;
+    _tapCountLabel.text = [NSString stringWithFormat:@"%d",_tapCount];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _tapCount = 0;
 }
 
 
@@ -26,4 +34,10 @@
 }
 
 
+- (IBAction)resetTapped:(id)sender {
+    _tapCount = 0;
+    _tapCountLabel.text = @"0";
+
+
+}
 @end

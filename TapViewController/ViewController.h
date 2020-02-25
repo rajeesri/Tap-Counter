@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *tapCountLabel;
+@property (nonatomic,assign) int tapCount;
 
+- (IBAction)resetTapped:(id)sender;
 @end
 
